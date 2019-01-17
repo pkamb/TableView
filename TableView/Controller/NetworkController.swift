@@ -6,7 +6,7 @@
 //  Copyright © 2019 Peter Kamb. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class NetworkController: NSObject, URLSessionDelegate {
     
@@ -23,6 +23,17 @@ class NetworkController: NSObject, URLSessionDelegate {
                 return
             }
             completion(items)
+        }
+        task.resume()
+    }
+    
+    func getImage(url: URL, completion: @escaping (UIImage?) -> ()) {
+        let task = session.dataTask(with: url) { (data, response, error) in
+            guard let data = data, let image = UIImage(data: data) else {
+                completion(nil)
+                return
+            }
+            completion(image)
         }
         task.resume()
     }

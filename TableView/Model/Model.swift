@@ -22,6 +22,11 @@ struct LoremPicsum {
         let format: String
         let width: Int
         let height: Int
+        
+        func getImage(size: Int, completion: @escaping (UIImage?) -> ()) {
+            let imageURL = LoremPicsum.Endpoints.getImage(self, size).url
+            NetworkController.default.getImage(url: imageURL, completion: completion)
+        }
     }
     
 }
