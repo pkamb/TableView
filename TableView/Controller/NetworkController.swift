@@ -16,4 +16,8 @@ class NetworkController: NSObject, URLSessionDelegate {
         return URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
     }()
     
+    func getRemoteContent<T>(url: URL, type: T.Type, completion: @escaping (T?) -> ()) where T : Decodable {
+        
+    }
+    
 }
