@@ -15,6 +15,10 @@ class TableViewCell: UITableViewCell {
     @IBOutlet var cellTextLabel: UILabel!
 }
 
+protocol TableViewCellViewModel {
+    var labelText: String { get }
+}
+
 class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
@@ -39,10 +43,13 @@ extension TableViewController { // UITableViewDataSource
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseIdentifier, for: indexPath) as? TableViewCell,
+            let viewModel: TableViewCellViewModel = nil else {
+            fatalError("Error dequeuing cell")
+        }
+        
+        cell.cellTextLabel.text = viewModel.labelText
+        
         return cell
     }
     
