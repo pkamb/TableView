@@ -11,8 +11,8 @@ import UIKit
 class TableViewCell: UITableViewCell {
     override var reuseIdentifier: String { return "TableViewCell" }
     
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var label: UILabel!
+    @IBOutlet var cellImageView: UIImageView!
+    @IBOutlet var cellTextLabel: UILabel!
 }
 
 class TableViewController: UITableViewController {

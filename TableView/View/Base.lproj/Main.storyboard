@@ -48,8 +48,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageView" destination="MX5-iU-E4K" id="07J-Un-1eI"/>
-                                    <outlet property="label" destination="sul-bF-J4b" id="X4e-29-Ayo"/>
+                                    <outlet property="cellImageView" destination="MX5-iU-E4K" id="MXp-vl-NRO"/>
+                                    <outlet property="cellTextLabel" destination="sul-bF-J4b" id="FoA-wL-CC4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
