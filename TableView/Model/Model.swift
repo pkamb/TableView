@@ -41,7 +41,7 @@ extension LoremPicsum {
     }
     
     static func getPhotos(completion: @escaping ([Photo]?) -> ()) {
-        NetworkController.default.getRemoteContent(urlString: Endpoints.getPhotos.rawValue, type: [Photo].self, completion: completion)
+        NetworkController.default.getRemoteContent(url: Endpoints.getPhotos.url, type: [Photo].self, completion: completion)
     }
     
 }
