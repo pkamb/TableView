@@ -99,13 +99,12 @@
 		586ABE2E21EFF3010069D96E /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				586ABE2F21EFF3010069D96E /* AppDelegate.swift */,
-				586ABE6021F0367E0069D96E /* TableViewController.swift */,
-				586ABE3321EFF3010069D96E /* Main.storyboard */,
 				586ABE3921EFF3040069D96E /* Assets.xcassets */,
-				586ABE3B21EFF3040069D96E /* LaunchScreen.storyboard */,
 				586ABE3E21EFF3040069D96E /* Info.plist */,
-				586ABE3621EFF3010069D96E /* TableView.xcdatamodeld */,
+				586ABE2F21EFF3010069D96E /* AppDelegate.swift */,
+				586ABE6321F037190069D96E /* Model */,
+				586ABE6521F037630069D96E /* View */,
+				586ABE6421F0372B0069D96E /* Controller */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -126,6 +125,31 @@
 				586ABE5421EFF3040069D96E /* Info.plist */,
 			);
 			path = TableViewUITests;
+			sourceTree = "<group>";
+		};
+		586ABE6321F037190069D96E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				586ABE3621EFF3010069D96E /* TableView.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		586ABE6421F0372B0069D96E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				586ABE6021F0367E0069D96E /* TableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		586ABE6521F037630069D96E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				586ABE3B21EFF3040069D96E /* LaunchScreen.storyboard */,
+				586ABE3321EFF3010069D96E /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
