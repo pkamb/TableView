@@ -16,11 +16,6 @@ class NetworkController: NSObject, URLSessionDelegate {
         return URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
     }()
     
-    func getRemoteContent<T>(urlString: String, type: T.Type, completion: @escaping (T?) -> ()) where T : Decodable {
-        guard let url = URL(string: urlString) else { completion(nil); return }
-        getRemoteContent(url: url, type: type, completion: completion)
-    }
-    
     func getRemoteContent<T>(url: URL, type: T.Type, completion: @escaping (T?) -> ()) where T : Decodable {
         let task = session.dataTask(with: url) { (data, response, error) in
             guard let data = data, let items = try? JSONDecoder().decode(T.self, from: data) else {
