@@ -7,3 +7,21 @@
 //
 
 import UIKit
+
+struct LoremPicsum {
+    
+    struct Photo {
+        let id: Int
+        
+        let author: String
+        let author_url: String
+        
+        let filename: String
+        let post_url: String
+        
+        let format: String
+        let width: Int
+        let height: Int
+    }
+    
+}
