@@ -10,7 +10,7 @@ import UIKit
 
 struct LoremPicsum {
     
-    struct Photo {
+    struct Photo: Codable {
         let id: Int
         
         let author: String
