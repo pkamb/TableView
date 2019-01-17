@@ -20,9 +20,19 @@ protocol TableViewCellViewModel {
 }
 
 class TableViewController: UITableViewController {
+    
+    var photos = [LoremPicsum.Photo]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        LoremPicsum.getPhotos { photos in
+            self.photos = photos ?? []
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,12 +49,12 @@ extension TableViewController { // UITableViewDataSource
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return photos.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseIdentifier, for: indexPath) as? TableViewCell,
-            let viewModel: TableViewCellViewModel = nil else {
+            let viewModel: TableViewCellViewModel = photos[indexPath.row] else {
             fatalError("Error dequeuing cell")
         }
         

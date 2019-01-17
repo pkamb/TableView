@@ -31,6 +31,14 @@ struct LoremPicsum {
     
 }
 
+extension LoremPicsum.Photo: TableViewCellViewModel {
+    
+    var labelText: String {
+        return author
+    }
+    
+}
+
 extension LoremPicsum {
     
     enum Endpoints {
