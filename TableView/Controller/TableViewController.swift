@@ -68,7 +68,8 @@ extension TableViewController { // UITableViewDataSource
             photo.getImage(size: 130) { image in
                 self.imageCache[photo.id] = image
                 DispatchQueue.main.async {
-                    tableView.reloadRows(at: [indexPath], with: .none)
+                    let imageCell = tableView.cellForRow(at: indexPath) as? TableViewCell
+                    imageCell?.cellImageView.image = image
                 }
             }
         }
