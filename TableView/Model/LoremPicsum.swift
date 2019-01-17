@@ -1,5 +1,5 @@
 //
-//  Model.swift
+//  LoremPicsum.swift
 //  TableView
 //
 //  Created by Peter Kamb on 1/16/19.
