@@ -1,4 +1,5 @@
 # TableView
 UITableView sample project
 
-![Screenshot](etc/images/screenshot.png)
+<img src="etc/images/screenshot.png" height="600">
+
