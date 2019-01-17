@@ -53,10 +53,11 @@ extension TableViewController { // UITableViewDataSource
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseIdentifier, for: indexPath) as? TableViewCell,
-            let viewModel: TableViewCellViewModel = photos[indexPath.row] else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.reuseIdentifier, for: indexPath) as? TableViewCell else {
             fatalError("Error dequeuing cell")
         }
+        
+        let viewModel: TableViewCellViewModel = photos[indexPath.row] 
         
         cell.cellTextLabel.text = viewModel.labelText
         
