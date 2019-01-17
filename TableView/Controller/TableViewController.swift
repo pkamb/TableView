@@ -22,6 +22,7 @@ protocol TableViewCellViewModel {
 class TableViewController: UITableViewController {
     
     var photos = [LoremPicsum.Photo]()
+    var imageCache = [Int : UIImage]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,9 +58,20 @@ extension TableViewController { // UITableViewDataSource
             fatalError("Error dequeuing cell")
         }
         
-        let viewModel: TableViewCellViewModel = photos[indexPath.row] 
+        let photo = photos[indexPath.row]
         
-        cell.cellTextLabel.text = viewModel.labelText
+        cell.cellTextLabel.text = photo.labelText
+        
+        let image = imageCache[photo.id]
+        cell.cellImageView.image = image
+        if image == nil {
+            photo.getImage(size: 130) { image in
+                self.imageCache[photo.id] = image
+                DispatchQueue.main.async {
+                    tableView.reloadRows(at: [indexPath], with: .none)
+                }
+            }
+        }
         
         return cell
     }
