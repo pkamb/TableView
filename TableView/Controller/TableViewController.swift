@@ -9,7 +9,7 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-    override var reuseIdentifier: String { return "TableViewCell" }
+    static var reuseIdentifier = "TableViewCell"
     
     @IBOutlet var cellImageView: UIImageView!
     @IBOutlet var cellTextLabel: UILabel!
