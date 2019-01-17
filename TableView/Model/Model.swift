@@ -32,7 +32,7 @@ extension LoremPicsum {
         case getPhotos = "https://picsum.photos/list"
     }
     
-    func getPhotos(completion: @escaping ([Photo]?) -> ()) {
+    static func getPhotos(completion: @escaping ([Photo]?) -> ()) {
         NetworkController.default.getRemoteContent(urlString: Endpoints.getPhotos.rawValue, type: [Photo].self, completion: completion)
     }
     
