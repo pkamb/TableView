@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="152" id="DNg-Ro-M9T">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="152" id="DNg-Ro-M9T" customClass="TableViewCell" customModule="TableView" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="152"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DNg-Ro-M9T" id="nBh-08-sUm">
@@ -47,6 +47,10 @@
                                         <constraint firstAttribute="trailing" secondItem="sul-bF-J4b" secondAttribute="trailing" constant="16" id="r2N-Cp-hoQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView" destination="MX5-iU-E4K" id="07J-Un-1eI"/>
+                                    <outlet property="label" destination="sul-bF-J4b" id="X4e-29-Ayo"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

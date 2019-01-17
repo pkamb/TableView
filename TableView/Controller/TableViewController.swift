@@ -8,6 +8,13 @@
 
 import UIKit
 
+class TableViewCell: UITableViewCell {
+    override var reuseIdentifier: String { return "TableViewCell" }
+    
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var label: UILabel!
+}
+
 class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
