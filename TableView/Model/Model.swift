@@ -28,15 +28,12 @@ struct LoremPicsum {
 
 extension LoremPicsum {
     
-    struct Networking {
-        
-        enum URLs: String {
-            case getPhotos = "https://picsum.photos/list"
-        }
-        
-        func getPhotos(completion: @escaping ([Photo]?) -> ()) {
-            NetworkController.default.getRemoteContent(urlString: URLs.getPhotos.rawValue, type: [Photo].self, completion: completion)
-        }
+    enum Endpoints: String {
+        case getPhotos = "https://picsum.photos/list"
+    }
+    
+    func getPhotos(completion: @escaping ([Photo]?) -> ()) {
+        NetworkController.default.getRemoteContent(urlString: Endpoints.getPhotos.rawValue, type: [Photo].self, completion: completion)
     }
     
 }
