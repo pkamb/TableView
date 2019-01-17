@@ -135,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				586ABE6621F038D40069D96E /* Model.swift */,
-				586ABE6821F03BD70069D96E /* NetworkController.swift */,
 				586ABE3621EFF3010069D96E /* TableView.xcdatamodeld */,
 			);
 			path = Model;
@@ -144,6 +143,7 @@
 		586ABE6421F0372B0069D96E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				586ABE6821F03BD70069D96E /* NetworkController.swift */,
 				586ABE6021F0367E0069D96E /* TableViewController.swift */,
 			);
 			path = Controller;
