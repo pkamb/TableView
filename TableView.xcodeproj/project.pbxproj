@@ -52,7 +52,7 @@
 		586ABE5421EFF3040069D96E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		586ABE6021F0367E0069D96E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		586ABE6621F038D40069D96E /* LoremPicsum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoremPicsum.swift; sourceTree = "<group>"; };
-		586ABE6821F03BD70069D96E /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = TableView/Controller/NetworkController.swift; sourceTree = SOURCE_ROOT; };
+		586ABE6821F03BD70069D96E /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkController.swift; path = TableView/NetworkController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +106,11 @@
 				586ABE3921EFF3040069D96E /* Assets.xcassets */,
 				586ABE3E21EFF3040069D96E /* Info.plist */,
 				586ABE2F21EFF3010069D96E /* AppDelegate.swift */,
+				586ABE3B21EFF3040069D96E /* LaunchScreen.storyboard */,
+				586ABE3321EFF3010069D96E /* Main.storyboard */,
 				586ABE6321F037190069D96E /* Model */,
-				586ABE6521F037630069D96E /* View */,
-				586ABE6421F0372B0069D96E /* Controller */,
+				586ABE6821F03BD70069D96E /* NetworkController.swift */,
+				586ABE6021F0367E0069D96E /* TableViewController.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -138,24 +140,6 @@
 				586ABE3621EFF3010069D96E /* TableView.xcdatamodeld */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		586ABE6421F0372B0069D96E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				586ABE6821F03BD70069D96E /* NetworkController.swift */,
-				586ABE6021F0367E0069D96E /* TableViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		586ABE6521F037630069D96E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				586ABE3B21EFF3040069D96E /* LaunchScreen.storyboard */,
-				586ABE3321EFF3010069D96E /* Main.storyboard */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
