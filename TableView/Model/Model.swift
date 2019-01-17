@@ -28,8 +28,16 @@ struct LoremPicsum {
 
 extension LoremPicsum {
     
-    enum Endpoints: String {
-        case getPhotos = "https://picsum.photos/list"
+    enum Endpoints {
+        case getPhotos
+        case getImage(Photo, Int)
+        
+        var url: URL {
+            switch self {
+            case .getPhotos: return URL(string:"https://picsum.photos/list")!
+            case .getImage(let photo, let size): return URL(string:"https://picsum.photos/\(size)/?image=\(photo.id)")!
+            }
+        }
     }
     
     static func getPhotos(completion: @escaping ([Photo]?) -> ()) {
